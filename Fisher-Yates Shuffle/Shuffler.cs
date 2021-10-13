@@ -14,6 +14,7 @@ namespace Fisher_Yates_Shuffle
 			SetNumbers();
 		}
 
+		//Sets the contents of the list as numbers 1-6
 		public void SetNumbers()
 		{
 			List<int> Numbers = new List<int>();
@@ -26,6 +27,7 @@ namespace Fisher_Yates_Shuffle
 			WriteBefore(Numbers);
 		}
 
+		//Writes the contents of the list to the console pre-shuffle
 		public void WriteBefore(List<int> Numbers)
 		{
 			Write("Before Shuffle: ");
@@ -38,6 +40,7 @@ namespace Fisher_Yates_Shuffle
 			Shuffle(Numbers);
 		}
 
+		//Starts the shuffle
 		public void Shuffle(List<int> Numbers)
 		{
 			for (int i = Numbers.Count - 1; i > 0; i--)
@@ -48,6 +51,7 @@ namespace Fisher_Yates_Shuffle
 			WriteAfter(Numbers);
 		}
 
+		//For swapping numbers
 		public void Swap(List<int> Numbers, int i, int j)
 		{
 			int temp = Numbers[i];
@@ -55,11 +59,13 @@ namespace Fisher_Yates_Shuffle
 			Numbers[j] = temp;
 		}
 
+		//Gets a random number
 		public int GetRandomNumber(int i)
 		{
 			return rand.Next(i + 1);
 		}
 
+		//Writes contents of the list to the console post-shuffle
 		public void WriteAfter(List<int> Numbers)
 		{
 			Write("After Shuffle: ");
